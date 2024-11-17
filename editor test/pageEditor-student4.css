@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-color: #b5d1fa;
+    }
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #0b0d30;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.details, .work {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h1, h3 {
+    margin: 0 0 10px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+
+a {
+    color: rgb(120, 39, 167);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery, .sitemap, .content {
+    margin-top: 20px;
+}
+
+.gallery h3, .sitemap h3, .content h3 {
+    color: #1e6dc2;
+}
+
+.gallery p, .sitemap p , .content p{
+    font-size: 20px;
+    color: black;
+}
+
+
+a:hover{
+    color: green;
+    text-decoration:underline;
+}
+
+
+ @media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}

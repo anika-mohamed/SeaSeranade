@@ -1,0 +1,403 @@
+@import url('http://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-image: url('homethumb.jpg');
+    background-size: cover; /* Ensure the image covers the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+.logo-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 150px; /* Adjust logo size as needed */
+    margin-right: 10px;
+}
+
+.logo-container h2 {
+    font-weight: bold;
+    color: #033e68;
+    text-align: center;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: darkblue; /* Change text color to dark blue */
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid rgba(5, 127, 210, 0.308); /* Bottom border for active link */
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid rgba(113, 175, 216, 0.308); 
+}
+
+/* Main content */
+main {
+    flex: 1;
+    padding: 1em;
+    margin-top: 60px; /* Add top margin to prevent content from hiding behind navbar */
+}
+
+.profile-btn {
+    background-color: transparent;
+    color: darkblue;
+    border: 2px solid rgb(0, 0, 139);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 15px; /* Makes the button curved */
+    font-weight: bold; /* Makes the font bold */
+}
+
+.profile-btn:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+.profile-btn:focus {
+    outline: none;
+}
+
+header {
+    width: 100vw;
+    min-height: 100vh; /* Set a minimum height */
+    background-image: url('homethumb.jpg');
+    background-position: center; /* Center the background image */
+    background-size: cover; /* Ensure the image covers the section */
+    backdrop-filter: blur(20px);
+    opacity: 90%;
+    padding: 15px 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 999;
+}
+
+.header-content {
+    margin-bottom: 150px;
+    color: aliceblue;
+    text-align: center;
+}
+
+.header-content h2 {
+    font-size: 4vmin;
+}
+
+.line {
+    width: 150px;
+    height: 4px;
+    background: darkblue;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.contents {
+    width: 100%;
+    height: auto; /* Allow content to dictate height */
+    background-image: url(thumbb.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header {
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* Hover effects for buttons */
+.ctn {
+    padding: 8px 15px;
+    background: aliceblue;
+    border-radius: 30px;
+    color: darkblue;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Add transition for smooth effect */
+}
+
+.ctn:hover {
+    background: darkblue; /* Change background color on hover */
+    color: aliceblue; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly increase the size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.profile-btn:hover {
+    background-color: darkblue;
+    color: white;
+    transform: scale(1.1); /* Slightly increase the size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+
+.explore {
+    width: 100%;
+    height: 100vh;
+    background-image: url(oceanie.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: center;
+}
+
+.explore-content {
+    width: 50%;
+    padding: 50px;
+    color: aliceblue;
+}
+
+.explore-content h1 {
+    font-size: 7vmin;
+    margin: 50px;
+}
+
+.explore-content .line {
+    margin-bottom: 50px;
+}
+
+.explore-content p {
+    color: aliceblue;
+}
+
+.explore-content .ctn {
+    margin-top: 40px;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background: darkblue;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social_icon,
+footer .navigation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer .social_icon li,
+footer .navigation li {
+    list-style: none;
+}
+
+footer .social_icon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .social_icon li a:hover {
+    transform: translateY(-10px);
+}
+
+footer .navigation li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .navigation li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    color: aliceblue;
+    font-weight: 600;
+}
+
+.content a {
+    text-decoration: none;
+    display: inline-block;
+    color: darkblue;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.video-background {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; 
+    background: #000; /* Fallback color */
+}
+
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-background .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Adjust text color as needed */
+}
+
+.video-background .content h1 {
+    font-size: 3em; /* Adjust size as needed */
+}
+
+.video-background .content .ctn {
+    margin-top: 20px; /* Add spacing above the button */
+}
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

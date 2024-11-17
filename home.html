@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Sea Serenade </title>>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        height: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url(premium.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        overflow: hidden;
+        padding: 20px 10px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+      }
+
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .header a:hover {
+        text-decoration: underline;
+        color: black;
+      }
+
+      .header a.active {
+        color: white;
+      }
+
+      .header-right {
+        float: right;
+      }
+
+      @media screen and (max-width: 500px) {
+        .header a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+
+        .header-right {
+          float: none;
+        }
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: #111;
+      }
+
+      footer {
+        text-align: center;
+        padding: 3px;
+        background-color: darkblue;
+        color: white;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer-links ul {
+        display: flex;
+        gap: 15px;
+      }
+
+      .content {
+        padding-top: 100px; /* Add this to avoid content hiding behind the fixed navbar */
+        padding-left: 20px;
+        flex: 1;
+      }
+
+      .content p {
+        color: white;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <a href="#default" class="logo">LOGO | Harmonizing Seas, Preserving Life</a>
+        <div class="header-right">
+          <a class="active" href="#home">Home</a>
+          <a href="#contact">Gallery</a>
+          <a href="#about">Shop</a>
+          <a href="#about">Sitemap</a>
+          <a href="#about">Feedback</a>
+          <a href="#about">Team</a>
+          <a href="#about">Profile</a>
+          <input type="text" placeholder="Search.." />
+        </div>
+      </div>
+      <div class="content">
+        <h2>Our Mission</h2>
+        <p>
+          The essence of the mission to protect and sustain marine ecosystems.
+          "Harmonizing Seas" implies creating balance and health within ocean environments,
+          recognizing the intricate connections between marine life and their habitats.
+          It suggests efforts to reduce pollution, overfishing, and habitat destruction,
+          ensuring that marine ecosystems can thrive. "Preserving Life" emphasizes
+          the ultimate goal of these conservation efforts:
+          to protect the myriad forms of life that depend on healthy oceans,
+          from the smallest plankton to the largest whales, ensuring their survival
+          for future generations. This slogan reflects a commitment to fostering a
+          harmonious relationship between human activities and the natural world,
+          safeguarding the diversity and vitality of life below water.
+        </p>
+        <marquee>
+          <img src="thumb5.jpeg" width="600" height="300">
+          <img src="thum1.png" width="600" height="300">
+          <img src="thumb2.png" width="600" height="300">
+          <img src="thumb3.png" width="600" height="300">
+        </marquee>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-links">
+        <ul>
+          <li><a href="">Shop</a></li>
+          <li><a href="">Gallery</a></li>
+          <li><a href="">Feedback</a></li>
+          <li><a href="">Team</a></li>
+          <li><a href="">Sitemap</a></li>
+        </ul>
+      </div>
+      <hr>
+      <div class="copyright">
+        © 2024 SeaSerenade. All rights reserved. </br> Designed by Anika.
+      </div>
+    </footer>
+  </body>
+</html>

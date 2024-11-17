@@ -1,0 +1,119 @@
+body{
+    background: #0d668c;
+    
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: auto;
+    flex: 1 0 auto;/*Allow the container to grow and fill available space*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0;
+}
+
+
+
+.container1{
+    background: #0d668c;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    margin: 0;
+}
+
+.content{
+    background-color: #0d668c;
+    margin: 0;
+    padding: 0;
+    /* margin-bottom: 0; */
+}
+
+.content div{
+    background-color: #add8e6;
+    margin: 35px 0;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+section {
+    
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+   
+}
+
+.container2, .container4, .container6 {
+    background: #add8e6;
+}
+
+.container3, .container5{
+    background: #e2fbbc;
+}
+
+.jellyfish{
+    float: right;
+    margin-left: 20px;
+}
+
+.chumbe_island img{
+    width:100%;
+    height:80%;
+    
+}
+.fish {
+    float: left; /* Aligns the fish image to the left */
+    margin-right: 20px; /* Adds space to the right of the image */
+}
+
+.island{
+    float: right;
+    margin-left: 20px;
+}
+
+.feedback a{
+    color: aliceblue;
+}
+
+h2, h3{
+    color: #333;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+a {
+    color: #1a2349;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.center-arrow{
+    display: block;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer{
+    margin-top: 0;
+}

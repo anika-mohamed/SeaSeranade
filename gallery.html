@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link ref="stylesheet" href="styles.css">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #006064;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .gallery-container {
+            max-width: 1600px;
+            width: 98%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .main-image-container {
+            width: 80%;
+            position: relative;
+            padding-bottom: 45%;
+            overflow: hidden;
+            height: 0;
+            margin-bottom: 30px;
+            border-radius: 25px;
+        }
+
+        .main-image-container img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 95%;
+            max-height: 95%;
+            object-fit: contain;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 1400px) {
+            .image-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="top">LIFE BELOW WATER</h1>
+    </header>
+    <div class="description">
+        <h2>Explore the vibrant and diverse world beneath the waves through our stunning gallery of marine life images.</h2>
+    </div>
+    <div class="gallery-container">
+        <div class="main-image-container">
+            <img id="slider-image" src="imagescw/coralreefs.jpeg" alt="Slider Image">
+        </div>
+        <div class="image-grid">
+            <img src="imagescw/coral.jpg" alt="Corals">
+            <img src="imagescw/coral2.jpg" alt="Corals">
+            <img src="imagescw/fish3.jpg" alt="Fish">
+            <img src="imagescw/jellyfish.jpg" alt="jellyfish">
+            <img src="imagescw/octopus.jpg" alt="octopus">
+            <img src="imagescw/seahorse.jpg" alt="seahorse">
+            <img src="imagescw/starfish.jpg" alt="starfish">
+            <img src="imagescw/tortoise.jpg" alt="tortoise">
+            <img src="imagescw/underwater2.jpg" alt="Marine Life">
+            <img src="imagescw/whale.jpg" alt="whale">
+            <img src="imagescw/fish5.jpg" alt="Fish">
+            <img src="imagescw/fish4.jpg" alt="Fish">
+            
+        </div>
+    </div>
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn"> &times; </span>
+        <img src="" alt="Enlarged Image" id="lightbox-img">
+    </div>
+
+    <a href="#top">
+        <img src="imagescw/top.png" alt="Back to Top"  height="50px" width="50px">
+    </a>
+    
+
+    <script>
+         const images = [
+            "imagescw/coralreefs.jpeg",
+            "imagescw/fish.jpeg",
+            "imagescw/under2.jpg",
+            "imagescw/underwater.jpeg",
+            "imagescw/Dolphins.jpg",
+            "imagescw/images(2).jpg"
+        ];
+
+        let currentIndex = 0;
+        const sliderImage = document.getElementById("slider-image");
+
+        function changeImage() {
+            sliderImage.src = images[currentIndex];
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        setInterval(changeImage, 2000);
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const gridImages = document.querySelectorAll('.image-grid img');
+        const closeBtn = document.querySelector('.close-btn');
+
+        gridImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+        
+    </script>
+</body>
+</html>
+
+

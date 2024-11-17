@@ -1,0 +1,140 @@
+body {
+    overflow: auto;
+    background-color:rgb(7, 19, 61)
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.container {
+    color: black;
+    background-color: #86b8d4;
+    padding: 20px;
+    text-align: center;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.box {
+    background-color: lightyellow;
+    padding: 20px;
+}
+
+#wonders {
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    background-color: rgb(67, 67, 99);
+   
+}
+
+.textContent {
+    text-align: center;
+}
+
+#wonders img {
+    width: 250px;
+    border-radius: 10%;
+    float: left;
+    height: 300px;
+    object-fit: cover;
+    
+}
+
+#threats {
+    padding: 20px;
+    color: black;
+    background-color: #86b8d4;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#threats img {
+    width: 250px;
+    border-radius: 10%;
+    float: right;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+#importance {
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    background-color: rgb(67, 67, 99);
+    
+}
+
+#importance img {
+    width: 250px;
+    border-radius: 10%;
+    float: left;
+    height: 300px;
+    object-fit: cover;
+    
+}
+
+#educate {
+    padding: 20px;
+    background-color:azure;
+    height: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#educate img {
+    width: 250px;
+    border-radius: 10%;
+    float: right;
+    height: 300px;
+    object-fit: cover;
+   
+}
+
+#help {
+    padding: 20px;
+    background-color:#86b8d4;
+    height: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#help img {
+    width: 300px;
+    border-radius: 10%;
+    float: left;
+    height: 300px;
+    object-fit: cover;
+}
+.content1, .content2, .content3, .content4, .content5 {
+    flex: 1;
+    padding: 0 20px;
+}
+
+h3{
+    color:#000080;
+    text-align:justify;
+}
+
+.arrow-head{
+    margin: 0 auto;
+    display:block;
+
+}
